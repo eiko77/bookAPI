@@ -25,9 +25,14 @@ class BookController extends Controller
         $form = $request->all();
         //unset($form['_token']);
         $book->fill($form)->save();
+    }
 
-        // $items = Book::all();
-        // return $items->toArray();
+    public function delete(Request $request)
+    {
+        $book = new Book;
+        $form = $request->all();
+        //unset($form['_token']);
+        $book->fill($form)->save();
     }
     // $param =[
     //     'title'=>$request->title,
